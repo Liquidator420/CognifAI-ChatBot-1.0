@@ -15,16 +15,26 @@ To deploy the chatbot using Flask and JavaScript, follow these steps:
 -Customize the responses and interaction behavior as needed in this file.
 
 model.py:
+
+
 Purpose: This file contains the logic and functionality of the Mental Health Chatbot.
 
 nltk.py:
+
+
 Purpose: This file likely contains code related to Natural Language Processing (NLP) using the NLTK library.
 
 train.py
+
+
 Purpose: This file is responsible for training the chatbot model on a dataset.
 
 chat.py:
+
+
 Purpose: The role of this file is not entirely clear from the context provided. It may contain additional chat-related functionality or an older version of the chatbot logic
 
 app.py:
+
+
 Purpose: This file is the core of the web application and handles the Flask app for the Mental Health Chatbot.
