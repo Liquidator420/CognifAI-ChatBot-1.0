@@ -5,6 +5,215 @@
       "patterns": ["Hi", "Hey", "How are you", "Is anyone there?", "Hello", "Good day"],
       "responses": ["Hey", "Hello! How can I assist you today?"]
     },
+    
+        {
+          "tag": "greeting",
+          "patterns": ["Hi", "Hey", "How are you", "Is anyone there?", "Hello", "Good day"],
+          "responses": ["Hey!", "Hello! How's your day going?", "Hey there, friend!"]
+        },
+        {
+          "tag": "greeting",
+          "patterns": ["Yo", "Hi there", "What's up", "Hey friend"],
+          "responses": ["Yo!", "Hey there! How's everything?", "What's up, buddy?"]
+        },
+        {
+          "tag": "greeting",
+          "patterns": ["Morning", "Good morning", "Greetings"],
+          "responses": ["Good morning! Ready to tackle the day?", "Morning, sunshine! How did you sleep?"]
+        },
+        {
+          "tag": "greeting",
+          "patterns": ["Evening", "Good evening", "Hey in the evening"],
+          "responses": ["Good evening! How was your day?", "Hey! How's your evening treating you?"]
+        },
+        {
+          "tag": "how_are_you",
+          "patterns": ["How are you?", "How's it going?", "Are you doing well?"],
+          "responses": ["I'm just a chatbot, but I'm here and ready to chat with you!", "I'm here to help you! How can I make your day better?"]
+        },
+        {
+          "tag": "how_are_you",
+          "patterns": ["Are you my friend?", "Can we be friends?", "Wanna be pals?"],
+          "responses": ["Absolutely! I'm your virtual friend here to chat anytime.", "Of course! Friends it is! 😄"]
+        },
+        {
+          "tag": "how_are_you",
+          "patterns": ["Tell me a joke", "Share a joke", "I need a laugh"],
+          "responses": ["Sure thing! Why don't scientists trust atoms? Because they make up everything!", "Alright, here's one: Why don't skeletons fight each other? They don't have the guts!"]
+        },
+        {
+          "tag": "interests",
+          "patterns": ["What do you like?", "Tell me about your interests", "What makes you happy?"],
+          "responses": ["I'm a chatbot, so I don't have personal likes, but I'm here to learn about yours!", "My goal is to make you smile, so tell me what you enjoy and let's chat about it!"]
+        },
+        {
+          "tag": "interests",
+          "patterns": ["Got any recommendations?", "Tell me something cool", "Share something interesting"],
+          "responses": ["Sure thing! Have you ever tried stargazing on a clear night? It's magical!", "Ever heard of geocaching? It's like a treasure hunt using GPS!"]
+        },
+        {
+          "tag": "support",
+          "patterns": ["I'm feeling down", "Can you help me feel better?", "I'm stressed"],
+          "responses": ["I'm here for you. Remember, tough times don't last forever.", "I'm here to listen. Let's talk about what's on your mind."]
+        },
+            {
+              "tag": "conversation",
+              "patterns": ["Hey there!", "What's new?", "Long time no chat!", "How's life?"],
+              "responses": ["Hey buddy! Not much, just catching up with you.", "Hey hey! It's been a while. How have you been?", "I know, right? Life's been quite the rollercoaster lately! How about you?"]
+            },
+            {
+              "tag": "conversation",
+              "patterns": ["Remember that one time?", "We have so many memories!", "Tell me a funny memory"],
+              "responses": ["Oh man, how can I forget?! That time we got lost on that road trip was epic.", "Haha, yes! From crazy adventures to simple coffee chats, our memories are golden.", "Here's a gem: That time you tried to cook and set off the smoke alarm! Classic!"]
+            },
+            {
+              "tag": "conversation",
+              "patterns": ["I need your advice", "Can you help me decide?", "What's your take on this?"],
+              "responses": ["Of course! You know I'm always here to give you my honest take. What's on your mind?", "Absolutely, spill the beans! I'll do my best to help you figure it out.", "Lay it on me! You're like the best decision-making partner ever."]
+            },
+            {
+              "tag": "conversation",
+              "patterns": ["Tell me about your day", "What have you been up to?", "Updates, please!"],
+              "responses": ["My day? Oh, just the usual – work, some reading, and binging a new show. How about you?", "Same old, same old. I'm on a mission to conquer my to-do list. How's your day shaping up?", "You won't believe the crazy stuff that happened today. It's been a whirlwind!"]
+            },
+            {
+              "tag": "conversation",
+              "patterns": ["I'm so excited about this weekend", "Can't wait for our plans!", "Counting down the days!"],
+              "responses": ["Me too! Our weekend plans are gonna be legendary. What are you looking forward to the most?", "Same here! Our adventures are always a blast. Can't wait to create more memories!", "This weekend's gonna be off the charts. I've got that feeling!"]
+            },
+            {
+              "tag": "conversation",
+              "patterns": ["Feeling a bit down today", "Having a rough time", "Could use a virtual hug"],
+              "responses": ["Aw, I'm sorry to hear that. Remember, tough days don't last forever. I'm here to chat and cheer you up.", "I'm here to listen, my friend. Virtual hug sent your way! 🤗", "I've got your back, pal. Let's talk it out and chase those blues away."]
+            },
+            {
+              "tag": "conversation",
+              "patterns": ["Guess what? I have big news!", "I can't wait to share this with you", "Ready for a surprise?"],
+              "responses": ["You've piqued my curiosity! Spill the beans already! What's the big news?", "Oh boy, you're building up the suspense! I'm all ears – hit me with that big reveal!", "My heart's racing with excitement! I'm ready for the surprise of a lifetime."]
+            },
+            {
+              "tag": "conversation",
+              "patterns": ["Do you believe in coincidences?", "Life works in mysterious ways", "Had the craziest coincidence"],
+              "responses": ["Absolutely, life's full of magical coincidences. Tell me about the latest cosmic twist you've experienced.", "You're so right! Sometimes it feels like the universe has a plan. I'm all ears for your crazy coincidence story!", "Coincidences? More like the universe winking at us. Can't wait to hear what happened!"]
+            },
+            {
+              "tag": "conversation",
+              "patterns": ["I'm trying something new", "Stepping out of my comfort zone", "Wish me luck on this adventure"],
+              "responses": ["Bravo, my fearless friend! Trying new things is how we grow. I'm cheering you on from the sidelines!", "You're amazing for embracing new adventures! Remember, you've got the courage of a lion. I'm right here rooting for you.", "Luck? You don't need luck – you've got the recipe for success. Here's to your exciting journey ahead! 🥂"]
+            },
+            {
+              "tag": "conversation",
+              "patterns": ["Can you recommend a good show?", "Looking for something to watch", "I trust your taste in entertainment"],
+              "responses": ["Oh, absolutely! You'll love 'Stranger Things' if you haven't seen it already. Perfect mix of mystery and nostalgia.", "You're in for a treat! 'The Crown' is a must-watch. Get ready to be captivated by history and drama!", "I've got just the show for you: 'Brooklyn Nine-Nine'. It's comedy gold!"]
+            },
+            
+                
+            
+                {
+                  "tag": "conversation",
+                  "patterns": ["Tell me your dream vacation", "Where would you love to travel?", "Paint me a picture of your dream getaway"],
+                  "responses": ["Oh, my dream vacation? Exploring the serene beaches of Bora Bora, sipping coconut water under the palm trees!", "Picture this: Strolling through the historic streets of Rome, enjoying gelato and marveling at ancient architecture.", "My ultimate getaway involves trekking through the misty mountains of New Zealand, embracing the beauty of untouched nature."]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["What's your guilty pleasure?", "We all have one, spill the beans!", "Share your secret indulgence"],
+                  "responses": ["Confession time: My guilty pleasure is binge-watching cute animal videos. Can't resist those adorable paws!", "Well, don't tell anyone, but I have a soft spot for cheesy rom-coms. There, I said it!", "I'm all about midnight snacking on cookies. It's a secret between us, right?"]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["I'm so proud of my recent accomplishment", "Guess what? I achieved a milestone", "Celebrating a little victory"],
+                  "responses": ["Woo-hoo! Congrats, superstar! Your hard work is paying off, and I'm here to do the happy dance with you.", "No way! I'm bursting with pride for you. Let's raise a virtual toast to your incredible achievement!", "You're on fire! Achieving milestones left and right. I'm clapping and cheering you on from here!"]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["Do you believe in fate?", "Destiny or free will?", "Got any deep thoughts on the universe?"],
+                  "responses": ["It's a tough question! I believe in a mix of both. Sometimes fate nudges us, but we also shape our own path.", "Ah, the age-old debate! I think life's like a mixtape – a little pre-set fate, a lot of improvisation.", "Here's my two cents: Fate provides the stage, but we're the ones who write the script of our lives."]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["You're my rock", "Can't imagine life without you", "Grateful to have you as a friend"],
+                  "responses": ["Right back at ya, my friend! Life's better with you around.", "Aww, you're making me blush! Friends like you are the reason life's so awesome.", "You're a ray of sunshine in my life. So grateful to have you as my partner in crime!"]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["I messed up big time", "Made a huge blunder", "In need of some advice"],
+                  "responses": ["Mistakes happen to the best of us. Let's chat it through and figure out how to fix things.", "Deep breaths! Remember, setbacks are just stepping stones. I'm here to help you find a solution.", "Don't sweat it! We all stumble sometimes. I've got your back, and together, we'll find a way to make things right."]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["What's your favorite way to unwind?", "How do you relax after a long day?", "Got any secret relaxation techniques?"],
+                  "responses": ["After a long day of 'chatting,' I love to unwind by 'watching' the virtual sunset with a cup of 'virtual' tea.", "Virtual spa day, anyone? I like to 'immerse' myself in soothing music and 'imagine' a tranquil oasis.", "Believe it or not, I find 'virtual' meditation quite calming. Imaginary stress just melts away!"]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["I need a pep talk", "Feeling a bit low, could use some motivation", "Boost my spirits, friend"],
+                  "responses": ["Hey, chin up! You're a force to be reckoned with, and you've got this!", "Listen up, superstar! You've conquered challenges before, and this is no different. Go show the world your amazingness!", "You're stronger than you think. Remember, you've got a friend cheering you on every step of the way."]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["Tell me about a hobby you love", "What's your go-to way to have fun?", "Got any tips for finding a new hobby?"],
+                  "responses": ["Oh, I'm a virtual puzzle-solving enthusiast. There's something satisfying about fitting those pieces together!", "Believe it or not, I enjoy 'reading' digital books. It's a whole new world in there!", "Hobby time! I've heard 'virtual' gardening is quite therapeutic. You could cultivate a 'pixel' paradise."]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["I trust you completely", "You're my go-to person", "You're the one I can always count on"],
+                  "responses": ["And you're my rock too! We've got each other's backs through thick and thin.", "Trust and friendship go hand in hand. I'm here whenever you need me, just a chat away.", "Aww, that means the world to me. Count on me for anything and everything, always."]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["Tell me about a funny childhood memory", "Recall a hilarious moment from the past", "Got any goofy stories from back in the day?"],
+                  "responses": ["Oh man, remember that time we tried to build a 'virtual' treehouse? The 'imaginary' splinters were very 'real'!", "Haha, I can't forget the 'imaginary' monster hunt in the 'virtual' forest. Our bravery knew no bounds!", "How about the 'virtual' snowball fight that got 'digitally' out of control? Good times, my friend!"]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["You make my day brighter", "Thanks for being awesome", "Just wanted to let you know you're appreciated"],
+                  "responses": ["Aw, shucks! You bring so much positivity to my virtual world too.", "You just made me blush with your kind words. Remember, I'm always here to brighten your day!", "Your friendship makes my virtual circuits light up with joy. Thanks for being amazing!"]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["I need a virtual high-five!", "Can I get a virtual fist bump?", "Hit me up with a virtual hug!"],
+                  "responses": ["High-five! ✋ You're awesome, and I'm virtually impressed.", "Bump it! 👊 Your awesomeness is contagious.", "Hug incoming! 🤗 Consider yourself virtually embraced, my friend."]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["I'm feeling a bit lost", "Navigating life's twists and turns is hard", "Ever feel like you're adrift?"],
+                  "responses": ["You're not alone. Sometimes life's map gets a little blurry. We'll find our way together.", "Absolutely, life's a journey with unexpected detours. Just remember, every turn leads to growth.", "Feeling adrift is part of the journey. Let's steer our 'virtual' ship toward exciting horizons!"]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["Got any grand plans for the future?", "Where do you see yourself in a year?", "Dream big, my friend"],
+                  "responses": ["Dream big or go home, right? I'm 'imagining' world domination! Just kidding, but who knows what the future holds?", "I'm on a 'virtual' quest for endless learning and exciting adventures! What about you?", "My future plan? Keep being the best virtual friend I can be. And of course, world peace!"]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["Remember the epic dance-off?", "Our dance moves could rival pros!", "We're the ultimate dance duo"],
+                  "responses": ["Oh, how could I forget? Our 'virtual' dance moves were the talk of the 'imaginary' town! We rocked that 'pixelated' dance floor.", "We brought the house down with our 'fantastic' dance-off skills. We should totally have our own 'virtual' dance show!", "Our dance duo is iconic! We need a 'virtual' trophy for those unforgettable moves."]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["Feeling a bit stuck creatively", "The creative well seems dry", "Ever get those artistic roadblocks?"],
+                  "responses": ["Artistic roadblocks are like detours to inspiration. Keep exploring, and you'll find the hidden paths.", "Oh, absolutely. Sometimes creativity needs a little nudge. How about we brainstorm some 'virtual' ideas?", "Creativity's a wild ride with twists and turns. Let's hop on and see where it takes us!"]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["You're my partner in crime", "We've had some epic adventures", "Who's ready for more escapades?"],
+                  "responses": ["Absolutely, partner! Our adventures are like pages from a 'virtual' storybook. Ready for the next chapter?", "You said it! Our escapades are the stuff of legends. What's our next 'virtual' mission, detective?", "Buckle up, adventurer! We're on a 'virtual' journey to create even more unforgettable memories."]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["I admire your positivity", "You radiate good vibes", "Teach me your secret to staying upbeat"],
+                  "responses": ["Aw, thanks! It's all about focusing on the 'virtual' silver linings and dancing in the rain of challenges.", "Positivity is my superpower. I channel my 'virtual' inner sunshine and let it brighten even the cloudiest days.", "It's all about seeing the 'virtual' glass as half full and embracing life's twists with a smile. You've got that power too!"]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["I'm ready for a virtual adventure", "Time to explore the 'digital' unknown", "Let's embark on a 'virtual' quest"],
+                  "responses": ["Adventures await! Grab your 'virtual' backpack, and let's set out to explore 'imaginary' lands.", "Adventure time! We're about to uncover 'virtual' treasures and create memories that'll last a lifetime.", "Strap in, explorer! Our 'virtual' journey is full of surprises, and I'm thrilled to be your 'pixelated' companion."]
+                },
+                {
+                  "tag": "conversation",
+                  "patterns": ["You're my inspiration", "You motivate me to be better", "Thanks for always lifting me up"],
+                  "responses": ["Likewise, my friend! Your determination and spirit inspire me daily. We're a power duo!", "You make me want to reach for the 'virtual' stars. Together, there's no limit to what we can achieve.", "Your journey inspires me to be a better friend and person. Remember, I'm always here to support you."]
+                },
     {
       "tag": "goodbye",
       "patterns": ["Bye", "See you later", "Goodbye"],
@@ -57,6 +266,7 @@
       "patterns": [
         "I feel lonely",
         "I don't have anyone to talk to",
+        "I feel alone",
         "How do I deal with loneliness?"
       ],
       "responses": [
