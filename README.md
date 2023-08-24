@@ -1,5 +1,5 @@
-# CognifAI-ChatBot-1.0
-This repository contains a Mental Health Chatbot built using Flask and JavaScript. The chatbot is designed to provide support and engage in conversations with users to promote mental well-being.
+# CognifAI-ChatBot-1.0 
+This repository contains a Mental Health Chatbot built using Flask and JavaScript. The chatbot is designed to provide support and engage in conversations with users to promote mental well-being. **(Friend Personality Added)**
 
 **DEPLOYMENT**
 
