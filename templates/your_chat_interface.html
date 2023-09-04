@@ -73,6 +73,49 @@
                     $("#text").val("");
                     $("#messageFormeight").append(userHtml);
 
+                    const rawTextLowerCase = rawText.toLowerCase().replace(/-/g, ''); // Convert to lowercase and remove hyphens
+                    const sensitiveKeywords = [
+                        "self harm",
+                        "crisis",
+                        "suicide",
+                        "hurt others",
+                        "kill others",
+                        "self injury",
+                        "kill myself",
+                        "self inflicted harm",
+                        "ending one's life",
+                        "taking one's own life",
+                        "suicidal ideation",
+                        "suicidal tendencies",
+                        "suicidal thoughts",
+                        "self destructive behaviour",
+                        "pessimism",
+                        "negative thinking",
+                        "dark thoughts",
+                        "unfavourable thoughts",
+                        "destructive thoughts",
+                        "gloomy thoughts",
+                        "downbeat thoughts",
+                        "disheartening thoughts",
+                        "defeatist mindset",
+                        "despondent thoughts",
+                        "kill",
+                        "end life",
+                        "ending life",
+                    ];
+                    const containsSensitiveKeyword = sensitiveKeywords.some(keyword => rawTextLowerCase.includes(keyword));
+
+                    if (containsSensitiveKeyword) {
+                        // Display a warning prompt to the user
+                        alert("Your message contains sensitive content. Please consider talking to a Mental Health professional or a trusted person.");
+
+                        // Remove the "typing..." bubble
+                        $("#messageFormeight .d-flex:last").remove();
+                        
+                        event.preventDefault();
+                        return;
+                    }
+
                     // Show "typing..." bubble
                     var typingHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://i.ibb.co/Lp3T6BK/Untitled-design.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + 'Typing...' + '</div></div>';
                     $("#messageFormeight").append(typingHtml);
