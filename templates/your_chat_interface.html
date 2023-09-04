@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"/>
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row justify-content-center h-100">        
+            <div class="col-md-8 col-xl-6 chat">
+                <div class="card">
+                    <div class="card-header msg_head">
+                        <div class="d-flex bd-highlight">
+                            <div class="img_cont">
+                                <img src="https://i.ibb.co/Lp3T6BK/Untitled-design.png" class="rounded-circle user_img">
+                                <span class="online_icon"></span>
+                            </div>
+                            <div class="user_info">
+                                <span>FriendBot</span>
+                                <p>Ask me anything!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="messageFormeight" class="card-body msg_card_body">
+                        
+                    </div>
+                    <div class="card-footer">
+                        <form id="messageArea" class="input-group">
+                            <input type="text" id="text" name="msg" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" required/>
+                            <!-- Remove the send button -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            function updateTypingBubble() {
+                var typingBubble = $("#messageFormeight .msg_cotainer:contains('Typing')");
+                var currentText = typingBubble.text();
+
+                // Determine the next text to display
+                if (currentText === "Typing...") {
+                    typingBubble.text("Typing.");
+                } else if (currentText === "Typing..") {
+                    typingBubble.text("Typing...");
+                } else {
+                    typingBubble.text("Typing..");
+                }
+            }
+
+            // Update the typing bubble text every 0.5 seconds
+            setInterval(updateTypingBubble, 500);
+
+            $("#text").on("keydown", function(event) {
+                if (event.key === 'Enter') {
+                    const date = new Date();
+                    const hour = date.getHours();
+                    const minute = String(date.getMinutes()).padStart(2, '0');
+                    const str_time = hour + ":" + minute;
+                    var rawText = $("#text").val();
+
+                    var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">' + str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg"></div></div>';
+                    
+                    $("#text").val("");
+                    $("#messageFormeight").append(userHtml);
+
+                    // Show "typing..." bubble
+                    var typingHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://i.ibb.co/Lp3T6BK/Untitled-design.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + 'Typing...' + '</div></div>';
+                    $("#messageFormeight").append(typingHtml);
+
+                    // Scroll to the bottom of the chat container
+                    $("#messageFormeight").scrollTop($("#messageFormeight")[0].scrollHeight);
+
+                    $.ajax({
+                        data: {
+                            msg: rawText,    
+                        },
+                        type: "POST",
+                        url: "/get",
+                    }).done(function(data) {
+                        // Calculate the delay based on the number of words in the chatbot's reply
+                        var wordsInReply = data.split(' ').length; // Split the reply into words and count them
+                        var delayInMilliseconds = Math.min(wordsInReply * 500, 3000); // Limit to a maximum of 3 seconds
+
+                        // Add a dynamic delay based on the number of words in the chatbot's reply (up to 3 seconds)
+                        setTimeout(function() {
+                            // Remove the "typing..." bubble
+                            $("#messageFormeight .d-flex:last").remove();
+
+                            // Construct the bot's message with like and dislike icons
+                            var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://i.ibb.co/Lp3T6BK/Untitled-design.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + data + '<span class="msg_time">' + str_time + '</span></div>';
+                            botHtml += '<div class="feedback"><i class="fas fa-thumbs-up likeIcon"></i> <i class="fas fa-thumbs-down dislikeIcon"></i></div></div>';
+
+                            $("#messageFormeight").append($.parseHTML(botHtml));
+
+                            // Scroll to the bottom of the chat container again after the bot's message
+                            $("#messageFormeight").scrollTop($("#messageFormeight")[0].scrollHeight);
+
+                            // Add a click event listener to the like and dislike icons within this message
+                            var feedbackContainer = $("#messageFormeight .feedback:last");
+                            feedbackContainer.find('.likeIcon').on('click', function() {
+                                $(this).toggleClass('selected-like');
+                                feedbackContainer.find('.dislikeIcon').removeClass('selected-dislike');
+                            });
+                            feedbackContainer.find('.dislikeIcon').on('click', function() {
+                                $(this).toggleClass('selected-dislike');
+                                feedbackContainer.find('.likeIcon').removeClass('selected-like');
+                            });
+                        }, delayInMilliseconds); // Delay based on the number of words or a maximum of 3 seconds
+                    });
+
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
